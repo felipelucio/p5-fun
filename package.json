@@ -2,14 +2,16 @@
   "name": "p5-fun",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "dev": "parcel ./src/index.html"
+    "dev": "npx shx rm -rf docs/* && parcel ./src/index.html -d docs",
+    "build": "npx shx rm -rf docs/* && parcel build ./src/index.html -d docs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "shx": "^0.3.2"
   },
   "dependencies": {
     "p5": "^1.1.9"
